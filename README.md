@@ -51,17 +51,38 @@ Para validar se as aplicações estão rodando corretamente, acesse os seguintes
     ![image](https://github.com/user-attachments/assets/5d6f9fe1-33cb-43c8-ab12-45340b5cd6f8)
 
     Onde será direcionado para a página onde os logs coletados são exibidos e processados.
+    Configure um padrão de índice com o nome `clima_atual`.
+    Após configurar, você poderá explorar e visualizar todos os logs processados.
     ![image](https://github.com/user-attachments/assets/d196a29a-5716-427a-b472-fb42e757e558)
 
 
+# Informações Relevantes
+
+- Persistência de Dados: Os volumes montados no `docker-compose.yml` garantem que os dados do Elasticsearch e do Filebeat persistam, mesmo que reinicie os containers.
+
+- Monitoramento e Logs: Use o comando `docker-compose logs -f` para monitorar os logs dos serviços em tempo real.
+
+## Comandos Úteis
+
+- Parar todos os contêineres:
+
+  Para encerrar todos os serviços:
 
 
+  docker-compose down
 
 
+- Verificar logs dos serviços:
+
+  Para monitorar os logs dos serviços:
 
 
-  
-
-   
+  docker-compose logs -f
 
 
+- Acessar um contêiner em execução:
+
+  Para entrar em um contêiner específico:
+
+
+  docker exec -it <nome-do-contêiner> /bin/bash
