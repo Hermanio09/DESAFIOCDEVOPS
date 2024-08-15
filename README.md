@@ -22,6 +22,11 @@ Esta aplicação coleta informações climáticas periodicamente em tempo real d
 
     A aplicação foi feita em Python. Esta aplicação coleta informações climáticas a cada minuto em tempo real de uma localização específica (neste caso, Fortaleza, Ceará) usando a API do OpenWeatherMap. Os dados que sao coletados são: a temperatura daquela localidade, a sensação termica, a porcentagem de umidade no ar, velocidade do vento, como esta o tempo e a pressão atmosferica. Essas informações são armazenadas em um arquivo JSON e processados usando a stack ELK (Elasticsearch, Logstash e Kibana).
 
+   A aplicação gera logs no formato JSON na pasta local 'logs' onde pode identificar o aruqivo JSON como 'clima_atual.json'
+   ![image](https://github.com/user-attachments/assets/172ec736-719b-4ac7-81d2-1c231ebf64d9)
+   Aplicação rodando e gerando logs:
+   ![image](https://github.com/user-attachments/assets/b881ad7f-0daf-4d06-8d23-186846fa77a4)
+
 
 2. Acessando as portas do ELK definidos no "docker-compose.yaml" para validar se esta tudo correto com as aplicações. Foi definido uma porta especifia para cada ferramenta. No caso Elasticsearch(porta:9200), Logstash(5044) e Kibana(5601). Para fazer a validação das aplicações e necessario acessar o link "localhost:porta-aplicação".
 
